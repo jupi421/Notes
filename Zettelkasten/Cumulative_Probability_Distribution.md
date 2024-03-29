@@ -1,3 +1,5 @@
+Topic: [[Statistics_and_Probabilities]]
+
 # Cumulative Probability Distribution
 
 This is the probability that a random variable $X \le x$ than the value $x$.

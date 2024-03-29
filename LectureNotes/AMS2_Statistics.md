@@ -1,5 +1,4 @@
-Status: #LectureNote
-Tags: [[Advanced_molecular_simulation]]
+Tags: #LectureNote [[Advanced_molecular_simulation]] 
 
 # AMS2_Statistics
 
@@ -52,9 +51,10 @@ $$
 [[AMS2_Statistics#^PDF-dirac|This]] can be used to evaluate the PDF of a variable $Y$ using the PDF of a variable $X$ it depends on if the mapping $g(x)$ from $x$ to $y$ is not invertible.
 
 ### When are multivariate distributions used?
-refresher on multivariate derivatives and notation
+[[Multivariate_Distributions|Multivariate Distributions]]
 
 ### Why are conditional probabilities not normalized
+[[Zettelkasten/Conditional_Probabilities|Conditional Probabilities]] don't need to be normalized because
 
 ### How are conditional probabilities and marginal probabilities connected?
 What happens when dividing by the marginal probability

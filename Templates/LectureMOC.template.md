@@ -1,6 +1,6 @@
 {{date: YYYY-MM-DD}}
-Status: #Lecture 
-Tags:
+Status: 
+Tags: #Lecture 
 
 # {{title}}
 

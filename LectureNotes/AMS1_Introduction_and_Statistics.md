@@ -1,5 +1,4 @@
-Status: #LectureNote
-Tags: [[Advanced_molecular_simulation]]
+Tags: #LectureNote [[Advanced_molecular_simulation]]
 
 # AMSLecture1-Introduction and Statisticsw
 
