@@ -53,11 +53,8 @@ $$
 ### When are multivariate distributions used?
 [[Multivariate_Distributions|Multivariate Distributions]]
 
-### Why are conditional probabilities not normalized
-[[Zettelkasten/Conditional_Probabilities|Conditional Probabilities]] don't need to be normalized because
-
-### How are conditional probabilities and marginal probabilities connected?
-What happens when dividing by the marginal probability
+### Why don't you have to normalize conditional probabilities? 
+[[Zettelkasten/Conditional_Probabilities|Conditional Probabilities]] are per definition already normalized.
 
 ### What are independent, identically distributed random variables?
 

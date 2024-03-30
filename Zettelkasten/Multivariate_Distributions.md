@@ -22,3 +22,5 @@ $$
 which is the joint PDF. This is the probability that $x_1\in[x_1, x_1+dx_1]$ and similar for the other variables.
 
 The average is computed analogous to the averages in single variate distributions, but integrating over all variables.
+
+#### TODO add figure from the lecture
