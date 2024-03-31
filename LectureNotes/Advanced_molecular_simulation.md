@@ -1,4 +1,4 @@
-Tags: #SS24 [[Statistics_and_Probabilities]]
+Tags: #SS24 #Lecture [[Statistics_and_Probabilities]] [[Computational_Physics]] [[Physics]] [[Molecular_Dynamics]] [[Zettelkasten/Monte_Carlo_Method]]
 
 # Advanced Molecular Simulation
 

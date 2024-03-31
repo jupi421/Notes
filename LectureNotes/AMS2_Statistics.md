@@ -57,11 +57,24 @@ $$
 [[Zettelkasten/Conditional_Probabilities|Conditional Probabilities]] are per definition already normalized.
 
 ### What are independent, identically distributed random variables?
+This is the case if all random variables in a joint PDF are independent. Then the joint PDF factorizes and can be written as [[Independence_of_random_variables#^independent-idetically-distributed|this]]
 
 ### What is the covariance of two variables?
+[[Zettelkasten/Covariance|Covariance]]
 
 ### Why is the covariance used in the higher dimensional Gaussian instead of the variance?
-
-### What is the difference between the covariance and variance?
+Using the variance would just show the spread of each variable independently and not how all variables change together.
 
 ### What is the difference between being uncorrelated and being independent?
+If two variables are independent, then they're uncorrelated, however this does not go the other direction. Correlated variables can still be dependent.
+
+**Example:** $y=|x|$
+Here $y$ is dependent on x, but calculating $C$ shows that they're uncorrelated.
+So independence means that there doesn't exist a relationship between two variables, while corelation implies that there is no linear relationship between two variables.
+
+### What is the Bayes theorem?
+[[Zettelkasten/Bayes_Theorem|Bayes' theorem]]
+
+### How is the Bayes theorem connected to [[Zettelkasten/Detailed_Balance|detailed balance]]?
+While these two concepts may look the same they are only if the PDF of $x$ and $y$ are stationary (time independent) and the transition probabilities are reversible. 
+(See: https://stats.stackexchange.com/questions/326194/question-on-detailed-balance-and-bayes-rule?rq=1)
