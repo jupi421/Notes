@@ -1,4 +1,2 @@
-Status:
-Tags: #LectureNote
-
-# {{title}}
+Status: #LectureNote
+Tags: 

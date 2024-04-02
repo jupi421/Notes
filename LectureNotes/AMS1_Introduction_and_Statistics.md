@@ -3,7 +3,7 @@ Tags: #LectureNote [[Advanced_molecular_simulation]]
 # AMSLecture1-Introduction and Statisticsw
 
 ### Why are free energies fundametally important?
-The [[Zettelkasten/Free_Energie|free energy]] is the determining factor for:
+The [[Free_Energies|free energy]] is the determining factor for:
 - Phase behavior such as the coexistence of two or more phases. The free energy at coexistence lines in phase diagrams has to be equal
 - Phase transitions
 - Hydrophobic effects
