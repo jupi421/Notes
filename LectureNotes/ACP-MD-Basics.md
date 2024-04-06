@@ -27,7 +27,6 @@ F(r^N) = -\nabla_i U(r^N) = -
 $$
 Newton's EOM result in a system of 3N coupled ordinary differential equations. They are coupled because the force on one particle is dependent on the positions of all the other particles.
 
-[[Zettelkasten/Lagrange-Mechanics|Lagrange Mechanics]]: For problems including many particles and/or constraints. Using the Lagrange mechanics to describe the system results in a set of second order differential equations.
+[[Zettelkasten/Lagrange-Mechanics|Lagrange Mechanics]]: For problems including many particles and/or constraints. Using the Lagrange mechanics to describe the system results in a set of second order differential equations. Solving these equations we can find the generalized trajectory $\{q(t)\}$ of the system.
 
-[[Zettelkasten/Hamilton-Mechanics|Hamilton Mechanics]]: Useful when studying phase space or when transitioning from classical to quantum mechanics.
-
+[[Zettelkasten/Hamilton-Mechanics|Hamilton Mechanics]]: Useful when studying phase space or when transitioning from classical to quantum mechanics. We use this to simplify the EOM from the Lagrange mechanics to a system of first order differential equations.

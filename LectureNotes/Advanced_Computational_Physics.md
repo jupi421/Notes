@@ -1,4 +1,3 @@
-{{date: YYYY-MM-DD}}
 Status: [[Statistics_and_Probabilities]] [[Physics]] [[Computational_Physics]]
 Tags: #Lecture 
 
