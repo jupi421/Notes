@@ -27,4 +27,4 @@ $$
     H(q,p) = \frac{1}{2} q \cdot G^{-1}(q) \cdot q + U(q)
 $$
 
-In the case of Cartesian coordinates these EOM reduce to a similar system as the one postulated be Newton.
+In the case of Cartesian coordinates these EOM reduce to a similar system as the one postulated be [[Newton-Mechanics|Newton]].
