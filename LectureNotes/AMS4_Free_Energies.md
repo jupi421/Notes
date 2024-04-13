@@ -1,7 +1,7 @@
 Status: #LectureNote
 Tags:[[Advanced_molecular_simulation]]
 
-# AMS3_Free_Energies
+# AMS4_Free_Energies
 
 ### How does splitting $Q_{NVT}$ into $Q^{(id)}$ and $Q^{(ex)}$ affect $F(N,V,T)$?
 The free energies for the ideal and the excess part are added. Here $F^{(id)}$ represents the free energy of the ideal gas. [[Zettelkasten/Partition_Function|More on partition functions]].
@@ -18,7 +18,7 @@ We do this to scale the energy of the system. For a system being examined in two
 ### Diagramm of config space
 #### TODO
 
-### What is a characteristik/indicator function?
+### What is a characteristik/indicator function? ^characteristic-function
 This offers to write the partition function as an integral over the entire configuration space and not only over a region. It is defined as
 $$ 
 h(r^N) = 
@@ -34,11 +34,12 @@ $$
     \frac{P_A}{P_B} = \frac{\langle h_A \rangle}{\langle h_B \rangle} = \frac{\langle Q_B \rangle}{\langle Q_A \rangle} = e^{-\beta \Delta F}
 $$
 
+*TODO: Work is connected via the free energy and these connected to relative probabilities*
+
 ### Coexistance in context of $P_A/P_B$ has to be 1 -> free energy?
 Because the probability is the same to find the system in both regions.
 
 ### Is a 2nd order phase transition sharp?
-#### TODO
 
 ### Why doesn't $T$ play a role in the hard sphare system (purely entropic system)?
 The Bolzmann factor for the hard spere system is given by
