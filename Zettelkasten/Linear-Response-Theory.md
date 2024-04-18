@@ -25,10 +25,10 @@ $$
 because the perturbation is so small we can assume it is similar as the infinitessimal change of $\langle A \rangle$ at $\lambda = 0$ i.e. without field, **showing that this small perturbation is really similar to the fluctuations of $A$ in equilibrium**.
 Evaluating this derivative shows that the linear response of an observable in a weak field is completely determined by the equilibrium averages in no field.
 $$ 
-    \langle \Delta \rangle = \lambda \beta \left[ \langle AB \rangle_0  - \langle A \rangle_0 \langle B \rangle_0 \right]
+    \langle \Delta A\rangle = \lambda \beta \left[ \langle AB \rangle_0  - \langle A \rangle_0 \langle B \rangle_0 \right]
 $$
 
-**Note:** This can be applied to any observable even $B$ (the one that couples the perturbation with the system).
+**Note:** This can be applied to any observable even $B$ (the one that couples the perturbation with the system). If A and B are uncorrelated turning on the field hos no effect on A.
 
 ## Dynamic response
 

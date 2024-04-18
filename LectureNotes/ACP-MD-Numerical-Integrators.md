@@ -7,7 +7,7 @@ Tags:
 We did that because these are the mechanics of the EOM we use in MD the numerical integrators should preserve these symmetries (ie. time reversability and symplecticity).
 
 ### What are the explicit requirements for the numerical integrators?
-**Time reversability:** For the exact flow of the Hamiltonian we have the time reversability condition
+^time-reversability **Time reversability:** For the exact flow of the Hamiltonian we have the time reversability condition
 $$
     \phi_t \circ \mathcal{T} \circ \phi_t = \mathcal{T}.
 $$
@@ -41,12 +41,21 @@ Velocity Verlet is symplectic for all degrees of freedom.
 With splitting methods one can derive time-reversible and symplectic algorithms for MD simulations based on the Liouville formulation of classical mechanics.
 The Liouville formulation gives insight into the energy stability of algorithms and can also be used to derive multi-time-step algorithms.
 
+1. write the Liouville operator for the coordinates used in the Hamiltonian.
+2. split Liouville operator into momentum and configuration part (Trotter identity)
+3. expand it as a series and see how this affects a vector if it's applied to it.
+4. do this for each individual Liouville operator.
+5. check for time reversability and symplecticity.
+
+With this approach we can derive the velocity verlet, adjoint velocity verlet(half kicks and full steps switched), symplectic euler and adjoint symplectic euler as well as multi-time-step algorithms. This is done with changing the way how the exponential Liouville operator is approximated (for adjoint: switching the sequence of the individual Liouville operators).
+Symplectic Euler is not time-reversible. 
+
 ### Why is it so important that the numerical integrators are symplectic?
-Because these integrators are symplectic it means that they describe a symplectic flow. A Hamiltonian can be reconstructed up to a constant from a symplectic flow, so we can assume that there is a corresponding Hamiltonian for the flow symplectic integrators describe. 
+Because these integrators are symplectic it means that they describe a symplectic flow (which implies phase space conservation). A Hamiltonian can be reconstructed up to a constant from a symplectic flow, so we can assume that there is a corresponding Hamiltonian for the flow symplectic integrators describe. 
 
 ### What are shadow Hamiltonian?
-These are the Hamilton functions that are derived by the symplectic integrators. Ideally the shadow Hamiltonian of an integrator should be as close as possible to the actual Hamiltonian of the system. This would make the integrator a good fit to use on the system.
-One can show that the trajectory produced by the symplectic integrator with the same initial state is the exact same as the trajectory produced by a shadow Hamiltonian, which is just different by a constant. This is also the reason why the symplectic algorithms don't show long time energy drifts.
+These are the Hamilton functions that correspond to the symplectic integrators. Ideally the shadow Hamiltonian of an integrator should be as close as possible to the actual Hamiltonian of the system. This would make the integrator a good fit to use on the system.
+One can show that the trajectory produced by the symplectic integrator with the same initial state is the exact same as the trajectory produced by the shadow Hamiltonian, which is just different by a constant. This is also the reason why the symplectic algorithms don't show long time energy drifts.
 Also the shadow Hamiltonian is strictly conserved along the trajectory of the velocity Verlet while the actual Hamiltonian fluctuates. This is not a problem if the time steps are sufficiently small, because then the difference between the shadow Hamiltonian and the Hamiltonian is also small.
 
 ### What does the shadow Hamiltonian depend on?
@@ -64,3 +73,5 @@ We can also calculate the quantities of interest for two or more time steps in t
 
 ### What is the purpose of multi-time-step algorithms?
 In the case of fast(intermolecular vibrations) and slower (intramolecular motion) motions the slower ones don't change very much on the time scale of the faster time scale, so computing the intramolecular forces every step is not needed. Multi-time-step algorithms allow to treat fast and slower motions in their time scales respectively. This is done by calculating these with different time steps which can speed up the simulation.
+
+To derive this we do the same as for the other integrators just that instead of $\mathcal{L}_r$ and $\mathcal{L}_p$ we split it into $\mathcal{L}_{fast}$ and \mathcal{L}_{slow}$. This results in a RESPA algorithm. Aside from it's advantages it's disadvantage is that different potential components are decoupled. This can cause severe artifacts. 

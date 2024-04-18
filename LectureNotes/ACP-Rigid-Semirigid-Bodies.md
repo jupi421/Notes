@@ -51,6 +51,7 @@ $$
 $$
 where $L_r$ is the relative angular momentum of the molecule and $\tau_r$ is the relative torque exerted by the external forces wrt the COM of the molecule.
 The total kinetic energies can also be decomposed into contributions of COM translation and contributions of the rotations. Here the rotational contributions are in terms of the relative movement of the atoms to the COM.
+Each molecule is described by 3 degrees of freedom for the positions, 3 for the rotations and 3 for the momenta.
 
 ### How can we express the angular velocities?
 We can write the decomposed velocities of an atom with the angular velocity operator, for which we can show that is has a one-to-one correspondence to the angular velocity (pseudo) vector. Then we can just use that vector to write the total and *translational velocities $\dot{x}(t)$?*. Using this we can also express the rotational kinetic energy in terms of the angular velocity vector and the inertia tensor which can be further simplified to 
@@ -66,6 +67,8 @@ $$
 $$
 which is a differential equation of the rotation operator. This fully specifies rotational motion.
 The kinematic equation can be written in different parametrizations for $\mathcal{R}(t)$ like Euler angles or unit quaternions.
+
+Euler equations are the newtonian EOM wrt of the COM, and one DEQ for the angular momentum.
 
 ### What are the properties of these parametrizations?
 **Euler angles:** 
@@ -95,7 +98,7 @@ however if the particle moves along this trajectory, the shape of the surface wi
 Each constraint confines the motion of the system to a hypersurface of dimensions $(3N - 1)$, so for n constraints this would mean $d=3N - n$.
 
 ### How can we write the Lagrangian for system with constraints?
-For a system with n constraints $\sigma_n(r^N) = 0$ we can express the Lagrangian as
+For a system with n constraints $\sigma_n(r^N) = 0$ we can express the Lagrangian as 
 $$
     \mathcal{L}' = \mathcal{L} - \sum_{\alpha = 1}^n \lambda_{\alpha}\sigma_{\alpha}(r^N).
 $$
@@ -107,4 +110,21 @@ with the constraint forces
 $$
     G_i^{\alpha} = - \lambda_{\alpha}\nabla_i \sigma_{\alpha}.
 $$
-Due to the gradient of the surface these constraint forces are normal to the constraint (level) surfaces
+Due to the gradient of the surface these constraint forces are normal to the constraint (level) surfaces. The Lagrange multipliers are used to adjust these forces in order to keep the trajectory on the constraint surface.
+
+### What are the conditions to find the Lagrange multiplier?
+First we have to require two things:
+1. The constraints don't change: $\dot{\sigma}_{\alpha} \equiv 0$
+2. Their rate of change vanishes: $\ddot{\sigma}_{\alpha} \equiv 0$. This makes sure that motion of the system follows the shape of the constraint surface.
+
+### Why are the exact Lagrange multiplier not very useful for doing MD?
+This is because the Lagrange multiplier calculated in that way are specific to the exact EOM. Due to the nature of the MD simulations we follow an approximation of these EOM and the Lagrange multiplier mentioned above would not guarantee that the constraints are enforced correctly for this approximation of the EOM (difference equations).
+Even if the constraint is obeyed up to order $\mathcal{O}(\Delta t^3)$ (in the case of a particle moving along the surface of a sphere where the constraint force is the centripetal force) this small error would grow exponentially for chaotic systems. [[ACP-MD-Hamilton-Mechanics#^Lyapunov-instability|Lyapunov Instability]]
+
+### How can we calculate the Lagrange multiplier to use with numerical integrators?
+*There exists a numerical iterative scheme described in script p. 277-278*
+
+### Other iterative schemes
+These can be used to get around the issue of calculating the Lagrange multiplier by directly solving the linear system of equations.
+**SHAKE:** This is an algorithm similar to the Gauss-Seidel algorithm. Specifically designed for Verlet algorithm
+**Rattle:** Designed for the velocity Verlet algorithm.

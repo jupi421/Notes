@@ -48,6 +48,8 @@ $$
 $$
 where $\mathbb{J}$ is the symplectic normal form. From this follows that symplectic matrices are invertible and form a group (Sp(2d, $\mathbb{R}$)).
 Furthermore symplectic transformations preserve the structure of Hamilton's equations. In classical systems such transformations are called canonical transformations.
+**If a flow is symplectic, then there is a Hamiltonian associated with it.**
+**Also symplecticity implies consnervation af phase space density.**
 
 Also a **differentiable map** is called **symplectic ** if the Jacobian $\partial \phi(x)$ is everywhere symplectic. This expression depends on the Jacobian because that is the derivative of a function in all directions and differentiable functions can be locally expressed as linear ones.
 *More about symplecticity in script p.207-208*
@@ -72,13 +74,32 @@ $$
 $$
 By substituting in the Hamiltonian vector field in and evaluating the expression we can write the Liouville operator as the [[Zettelkasten/Poisson-Bracket|Poisson bracket]] of something (usually a phase space observable) and the Hamiltonian.
 $$
-    i\mathcal{L} = {\cdot, H\}
+    i\mathcal{L} = \{\cdot, H\}
 $$
+
+we can now write the solution of the DEQ in terms of the Liouville Operator
+$$
+    x(t) = e^{i\mathcal{L}(t - t_0)} x(t_0)
+$$
+this is the Liouville formalism that we can use to derive numerical integrators.
 
 ### When are thy dynamics time-reversible?
 When the trajectory followed in the reverse direction is also a solution of the EOM. So when flipping the signs of the momenta and reversing the time the EOM should't change the EOM.
 
-### What are the Lyapunov exponents?
+The time reversal mapping is
+$$
+    \mathbb{T} = \begin{bmatrix}
+    \mathbb{I} & 0\\ 
+    0 & -\mathbb{I}\\ 
+ \end{bmatrix}
+$$
+where the transformations is
+$$ 
+    \mathcal{T}(x) = \mathbb{T}\cdot x
+$$
+
+### What are the Lyapunov exponents? 
+^Lyapunov-instability
 The Jacobian $J = \partial \phi_t(x)$ always transforms a sphere into a hyperellipse in $\mathbb{R}^{2f}$ by stretching it by some parameters $\sigma_1,...,\sigma_{2f}$ (which are non-negative) along orthogonal unit vectors $e_1,...,e_{2f}$.
 
 In some systems some of these stretching factors grow exponentially with time
@@ -90,6 +111,8 @@ These $\lambda_i$ are called **Lyapunov exponents** and can be calculated as
 $$
     \lambda_i = \lim_{t \rightarrow \infty} \frac{ln \sigma_i(t)}{t}
 $$
+
+Because of the stretching of the initial volume, a small perturbation will end up further away on the hyperellipse.
 
 ### What is a chaotic system of ODEs?
 This is if the system produces very different outputs for very small changes in the initial conditions. In terms of the Lyapunov exponents a system is chaotic if $\lambda_i > 0$, Which is true for most systems in MD
