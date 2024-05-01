@@ -1,11 +1,11 @@
 Status: #LectureNote
-Tags: 
+Tags: [[AMS]]
 
 
 # AMS5-Free-Energies
 
 ### Why are first order phase transitions sharp?
-Because the probability for one phase gets so much larger than the other one the further you move away from the coexistance line you go.
+Because the probability for one phase gets so much larger than the other one the further you move away from the coexistance line.
 
 ### What are collective variables/functions?
 Collective variables are variables that depend on other variables, like the distance $r=\sqrt{(r_1 - r_2)^2}$. 
@@ -24,7 +24,7 @@ This happens because of the logarithmic term in the free energy that is dependen
 ### Why is this not a problem for?
 It is not a problem as we are only interested in the free energy differences of the two regions and this factor cancels. This is why we can just ignore this term and write the free energy profile as
 $$ 
-    F(\xi) = -k_B ln(Q(\xi))
+    F(\xi) = -k_B T ln(Q(\xi))
 $$
 and with multiple collective variables it is
 $$ 
@@ -56,3 +56,4 @@ $$
 $$ 
 again because we're only interested in energy differences we can ignore the last term.
 
+*Note: This equation allows us to calculate the free energy from a proabability distribution.*

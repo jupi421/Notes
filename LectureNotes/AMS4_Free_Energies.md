@@ -1,5 +1,5 @@
 Status: #LectureNote
-Tags:[[Advanced_molecular_simulation]]
+Tags:[[AMS]]
 
 # AMS4_Free_Energies
 

@@ -1,4 +1,5 @@
-Tags: #LectureNote [[Advanced_molecular_simulation]] 
+Status: #LectureNote 
+Tags: [[AMS]] 
 
 # AMS2_Statistics
 

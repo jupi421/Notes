@@ -30,7 +30,7 @@ $$
 where $\tau = t - t'$.
 Knowing the response function makes it possible to calculate the response to an arbitrary perturbation.
 
-Using the properties of the mirrored heaviside-step function and the above relation, we can show that the response function can be found by
+Using the properties of the mirrored Heaviside-step function and the above relation, we can show that the response function can be found by
 $$ 
     \chi_{AB}(t) = -\beta \frac{d \langle \Delta B(0) \Delta A(t) \rangle_0}{dt} \theta_H(t)
 $$

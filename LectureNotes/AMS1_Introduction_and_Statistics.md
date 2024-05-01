@@ -1,4 +1,4 @@
-Tags: #LectureNote [[Advanced_molecular_simulation]]
+Tags: #LectureNote [[AMS]]
 
 # AMSLecture1-Introduction and Statisticsw
 
@@ -21,9 +21,9 @@ The Boltzmann factor represents the probability to find the system in a state of
 ### What are the different statistical moments and what do they say about the system?
 [[Zettelkasten/Statistical_Moments|Statistical Moments]] ... 
 
-### What is the purpose of the | term | in $f_Y(y)$?
-The term on the left-hand side in ^pdf-compression
+### What is the purpose of the | term | in $f_Y(y)$? ^pdf-compression
+The term on the left-hand side in 
 $$ 
     f_Y(y) = f_X(x) \left| \frac{dy}{dx} \right|^{-1}
-$$ 
-accounts for the compression/inflation of the PDF when being mapped from x to y. If $g(x)$ has a steep slope, then the interval in x gets mapped onto a larger interval in y. Hence the probability density in y decreases.
+$$
+accounts for the compression/inflation of the PDF when being mapped from x to y. If $g(x)$ has a steep slope, then the interval in x gets mapped onto a larger interval in y. Hence the probability density in y decreases. 

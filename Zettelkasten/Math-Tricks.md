@@ -1,3 +1,4 @@
+Topic: [[Zettelkasten/Math]]
 # Math tricks
 
 ### Sums $\sum$
@@ -8,3 +9,5 @@
 ### Integrals $\int$
 
 - change order of integration
+
+### Derivatives 

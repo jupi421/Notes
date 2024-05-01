@@ -119,7 +119,7 @@ First we have to require two things:
 
 ### Why are the exact Lagrange multiplier not very useful for doing MD?
 This is because the Lagrange multiplier calculated in that way are specific to the exact EOM. Due to the nature of the MD simulations we follow an approximation of these EOM and the Lagrange multiplier mentioned above would not guarantee that the constraints are enforced correctly for this approximation of the EOM (difference equations).
-Even if the constraint is obeyed up to order $\mathcal{O}(\Delta t^3)$ (in the case of a particle moving along the surface of a sphere where the constraint force is the centripetal force) this small error would grow exponentially for chaotic systems. [[ACP-MD-Hamilton-Mechanics#^Lyapunov-instability|Lyapunov Instability]]
+Even if the constraint is obeyed up to order $\mathcal{O}(\Delta t^3)$ (in the case of a particle moving along the surface of a sphere where the constraint force is the centripetal force) this small error would grow exponentially for chaotic systems. [[ACP7-MD-Hamilton-Mechanics#^Lyapunov-instability|Lyapunov Instability]]
 
 ### How can we calculate the Lagrange multiplier to use with numerical integrators?
 *There exists a numerical iterative scheme described in script p. 277-278*

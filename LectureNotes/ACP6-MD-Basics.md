@@ -79,7 +79,7 @@ Autocorrelation functions connect the thermodynamics of a system to [[Zettelkast
 [[Zettelkasten/Linear-Response-Theory|Linear response theory]] is the link between time correlation functions and the response of the system to weak perturbations.
 
 ### What are Green-Kubo relations?
-These link an equilibrium property with the way the system relaxes after being perturbated.
+These link an equilibrium property with the way the system relaxes after being perturbated via a correlation function.
 
 ### What is the purpose of response functions?
 It generalizes the formulation of the linear response theory to account for fields of arbitrary time dependence.

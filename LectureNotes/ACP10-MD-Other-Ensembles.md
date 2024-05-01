@@ -13,6 +13,7 @@ We use them to do simulations with constant temperature or to remove dissipated 
 ### What is the Andersen thermostat?
 The Andersen thermostat is a thermostating mechanism that produces a canonical ensemble for a given temperature by coupling the system to a heat bath. This is realized by occasionally adding an impulse to a random particle.
 In such a stochastic collision a velocity that corresponds to the desired temperature is drawn from a Maxwell-Boltzmann distribution and given to a random particle. These collisions can be seen as a MC step. The strength of the heatbaths-system coupling can be controlled by the collision frequency $\nu$. In other words we are mixing Newtonian dynamics with stochastic collisions.
+This ensures that all energy shells are visited with the correct Boltzmann-weight.
 
 ### How do we integrate that into our MD simulation?
 1. Initialize System
@@ -69,7 +70,7 @@ Sometimes the Nose-Hoover thermostat can't sample the canonical distribution bec
 ### What is the Berendsen and Bussi-Donadio-Parinello thermostats? 
 These thermostats have similar feedback principles as the Nose-Hoover thermostat.
 Eg. the Berendsen thermostat rescales the velocities in such a way that the rate of change of the instantaneous temperature is proportional to the difference of the instantaneous and target temperature. The fluctuations in the kinetic energy is not compatible with the canonical ensemble and that's why it will sample these wrongly.
-*More on that script p. 297*
+Bussi-Donadio-Parinello don't rescale the kinetic energy but rather draw the target kinetic energy from a canonical distribution. This then leads to the correct sampling of the canonical ensemble.
 
 ### How do we do MD in the NpT ensembles?
 Here again we will introduced an extended Hamiltonian. The basis for this is to first derive the EOM for the isenthalpic-isobaric NpH ensemble. In the NpT ensemble the enthalpy then fluctuates and the temperature is imposed.

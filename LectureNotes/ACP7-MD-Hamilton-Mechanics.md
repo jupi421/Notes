@@ -35,7 +35,7 @@ $$
     \frac{d\phi_t(x)}{dt} = X(\phi_t(x))
 $$
 
-*Note:* A local one-parameter group of [[Zettelkasten/Diffeomorphisms|diffeomorphisms]] is a local map $(t,x) \mapsto \phi_t(x)$. This means that for each t there is a diffeomorphism that maps the positions from $U \subset \mathbb{R}^d$ to the positions at time t which will lie in in $\mathbb{R}$^d. So if $t=0$ then this is the identity map, which leave the positions x unchanged.
+*Note:* A local one-parameter group of [[Zettelkasten/Diffeomorphisms|diffeomorphisms]] is a local map $(t,x) \mapsto \phi_t(x)$. This means that for each t there is a diffeomorphism that maps the positions from $U \subset \mathbb{R}^d$ to the positions at time t which will lie in in $\mathbb{R}^d$. So if $t=0$ then this is the identity map, which leave the positions x unchanged.
 
 
 ### What is symplecticity?
